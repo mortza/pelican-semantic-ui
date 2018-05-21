@@ -5,7 +5,13 @@
 html[lang="fa"], html[lang="ar"] {
     direction: rtl;
 }
-
+pre>code{
+    direction: ltr;
+}
+.CodeMirror{
+    height: auto !important;
+    font-size: 1rem;
+}
 body {
     font-family: serif;
 }

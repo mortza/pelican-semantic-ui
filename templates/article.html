@@ -22,10 +22,18 @@
 <div class="ui text container tall stacked segment">
     <div class="overlay">
         <div class="ui labeled icon vertical menu">
-            <a class="item sharer active blue" data-sharer="twitter" data-title="{{ article.title}}" data-url="{{ SITEURL}}/{{ article.url }}"><i class="twitter icon"></i> Tweet</a>
-            <a data-sharer="facebook" data-url="{{ SITEURL}}/{{ article.url }}" class="item sharer" style="color:#06416d!important" ><i class="facebook icon"></i> اشتراک</a>
-            <a data-sharer="googleplus" data-url="{{ SITEURL}}/{{ article.url }}" class="item sharer active red"><i class="google plus icon"></i> اشتراک</a>
-            <a class="item sharer active yellow" data-sharer="email" data-to="" data-title="{{ article.title}}" data-subject="Checkout this article!" data-url="{{ SITEURL }}/{{ article.url }}"><i class="mail icon"></i> ایمیل</a>
+            <a class="item sharer" data-sharer="twitter" data-title="{{ article.title}}" data-url="{{ SITEURL}}/{{ article.url }}" style="color:#00ACED !important">
+                <i class="twitter icon"></i>
+            </a>
+            <a class="item sharer" data-sharer="facebook" data-url="{{ SITEURL}}/{{ article.url }}" style="color:#3B5998 !important" >
+                <i class="facebook icon"></i>
+            </a>
+            <a class="item sharer" data-sharer="googleplus" data-url="{{ SITEURL}}/{{ article.url }}" style="color: #DD4C39 !important">
+                <i class="google plus icon"></i>
+            </a>
+            <a class="item sharer" data-sharer="linkedin" data-url="{{ SITEURL}}/{{ article.url }}" style="color:#3B5998 !important">
+                <i class="linkedin icon"></i>
+            </a>
         </div>
     </div>
     {{ article.content }}
@@ -38,4 +46,26 @@
 
 {% block extra_scripts %}
 <script type="text/javascript" src="https://cdn.jsdelivr.net/sharer.js/0.2.4/sharer.min.js"></script>
+<script type="text/javascript" src="{{ SITEURL }}/theme/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="{{ SITEURL }}/theme/codemirror/mode/python/python.js"></script>
+<script type="text/javascript">
+    CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: {
+            name: "text/x-cython",
+            version: 2,
+            singleLineStringErrors: false
+        },
+        rtlMoveVisually:true,
+        readOnly:true,
+        lineNumbers: true,
+        indentUnit: 4,
+        matchBrackets: true,
+        theme:'monokai'
+    });
+</script>
 {% endblock %}
+
+{% block extra_link_css %}
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/codemirror/lib/codemirror.css">
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/codemirror/theme/monokai.css">
+{% endblock extra_link_css %}
