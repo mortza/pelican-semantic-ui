@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8" />
@@ -30,7 +30,8 @@
     <!--meta name="twitter:image" content=""-->
     {% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/rtl.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/semantic.rtl.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css">
 </head>
 <body>
@@ -43,7 +44,7 @@
                 {% if WELCOME_MESSAGE %}
                 <h1>{{ WELCOME_MESSAGE }}</h1>
                 {% else %}
-                <h1>Welcome to {{ SITENAME }}</h1>
+                <h1>سلام!</h1>
                 {% endif %}
             </div>
         </div>

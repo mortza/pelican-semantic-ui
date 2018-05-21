@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Tags - {{ SITENAME }}{% endblock %}
+{% block title %}تگ‌ها - {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <div class="ui grid intro">
     <div class="row">
         <div class="column center aligned">
-            <h1>Tags</h1>
+            <h1>تگ‌ها</h1>
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@
             <div class="item">
                 <div class="title">
                     <i class="dropdown icon"></i>
-                    <span class="ui tag big label green">{{ tag }} - {{ articles|count }} posts</span>
+                    <span class="ui tag big label green">{{ tag }} - {{ articles|count }} نوشته‌ها</span>
                 </div>
                 <div class="content">
                     {% for article in articles %}

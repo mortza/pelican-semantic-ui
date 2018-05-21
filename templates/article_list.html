@@ -18,13 +18,13 @@
         <div class="ui twelve wide column left aligned">
             <a class="ui header huge" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
             <p class="ui text">{{ article.summary }}</p>
-            <p><strong><a href="{{ SITEURL }}/{{ article.url }}">Leia mais</a></strong></p>
+            <p><strong><a href="{{ SITEURL }}/{{ article.url }}">بیشتر بخوانید</a></strong></p>
         </div>
     </div>
     {% endfor %}
     {% include 'pagination.html' %}
     {% else %}
-    <h3>No articles yet! Please write one.</h3>
+    <h3>هنوز نوشته‌ای ایجاد نشده است.</h3>
     {% endif %}
 </div>
 {% endblock %}
