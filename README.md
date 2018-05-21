@@ -2,6 +2,5 @@ Pelican Semantic-UI Theme
 =========================
 
 
-This theme forked from [here](https://github.com/ellisonleao/pelican-semantic-ui.git) and slightly patched to fit my needs.
-
-all credits goes to original author.
+this theme forked from `git clone https://github.com/ellisonleao/pelican-semantic-ui.git`
+slightly patched to fit my usages
