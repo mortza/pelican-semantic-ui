@@ -37,7 +37,7 @@
         </div>
     </div>
     {{ article.content }}
-
+    <span class="ui author">توسط <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> در {{ article.date.strftime('%d %B %Y')}}</span>
     {% if DISQUS_SITENAME %}
     {% include 'disqus.html' %}
     {% endif %}
@@ -69,3 +69,10 @@
 <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/codemirror/lib/codemirror.css">
 <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/codemirror/theme/monokai.css">
 {% endblock extra_link_css %}
+
+{% block theme_css %}
+{% include "semantic_css.html" %}
+{% endblock theme_css %}
+{% block theme_js %}
+{% include "semantic_js.html" %}
+{% endblock theme_js %}

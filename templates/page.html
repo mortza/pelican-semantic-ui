@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ page.content }}	
+{% endblock content %}
+
+{% block theme_css %}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:400">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+{% endblock theme_css %}
+{% block theme_js %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+        <script src="{{ SITEURL }}/theme/js/dependencies.js"></script>
+        <script src="{{ SITEURL }}/theme/js/main.js"></script>
+{% endblock theme_js %}
