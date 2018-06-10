@@ -28,28 +28,18 @@
         
         {% block theme_css %}
         {% endblock theme_css %}
-
         {% block extra_link_css %}
         {% endblock extra_link_css %}
     </head>
     <body>
-        {% block content %}
-            {% include "menu.html" %}
-            <div class="ui grid intro">
-                <div class="row">
-                    <div class="column center aligned">
-                        {% if WELCOME_MESSAGE %}
-                            <h1>{{ WELCOME_MESSAGE }}</h1>
-                        {% else %}
-                            <h1>سلام!</h1>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            <div class="ui grid main container">
+        {% include "menu.html" %}
+        <div class="ui container">
+            {% block content %}
+                <!-- <div class="ui grid" style="padding-top:2em;"> -->
                 {% include 'article_list.html' %}
-            </div>
-        {% endblock content %}
+                <!-- </div> -->
+            {% endblock content %}
+        </div>
         {% block theme_js %}
         {% endblock theme_js %}
         {% if GOOGLE_ANALYTICS %}

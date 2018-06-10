@@ -1,16 +1,16 @@
-<div class="ui borderless fixed stackable main menu">
-    <div class="ui text container">
-        <a href="/" class="header item">
-            {% if LOGOPATH %}
-            <img class="logo" src="{{ SITEURL }}{{ LOGOPATH }}">
-            {% else %}
-            <img class="logo" src="{{ SITEURL }}/theme/images/logo.png">
-            {% endif %}
-            {{ SITENAME }}
-        </a>
-        <a href="{ filename }/pages/about.html" class="item">{{ item }}</a>
+<div class="ui red inverted massive menu">
+    <div class="header item">
+        <i class="terminal icon"></i>
+    </div>
+    <div class="right menu">
         {% for item, url in MENU_LINKS %}
-        <a href="{{ url }}" class="item">{{ item }}</a>
+            <a href="{{ url }}" class="item">{{ item }}</a>
         {% endfor %}
+        <div class="item">
+            <div class="ui mini inverted transparent icon input">
+                <input type="text" name="search" placeholder="جست و جوی تگ‌ها..." data-search>
+                <i class="search link icon"></i>
+            </div>
+        </div>
     </div>
 </div>
