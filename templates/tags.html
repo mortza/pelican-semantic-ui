@@ -3,13 +3,6 @@
 {% block title %}تگ‌ها - {{ SITENAME }}{% endblock %}
 
 {% block content %}
-<div class="ui grid intro">
-    <div class="row">
-        <div class="column center aligned">
-            <h1>تگ‌ها</h1>
-        </div>
-    </div>
-</div>
 <div class="ui grid main container">
     <div class="ui container">
         {% if tags %}
@@ -18,15 +11,16 @@
             <div class="item">
                 <div class="title">
                     <i class="dropdown icon"></i>
-                    <span class="ui tag big label green">{{ tag }} - {{ articles|count }} نوشته‌ها</span>
+                    <span class="ui label green" style="direction:ltr;">{{ tag|title }}</span>
+                    <span class="ui label red" style="float:left;">{{ articles|count }}</span>
                 </div>
                 <div class="content">
                     {% for article in articles %}
                     <div class="ui three column grid">
                         <div class="two wide column">
-                           <i class="icon calendar"></i> {{ article.date.strftime('%d/%m/%Y') }}
+                           <i class="icon calendar"></i> {{ article.date | jDate('%d %B %Y') }}
                         </div>
-                        <div class="fourteen wide column">
+                        <div class="fourteen wide column harmattan-font">
                             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
                         </div>
                     </div>

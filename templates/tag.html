@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}تگ‌ها - {{ SITENAME }}{% endblock %}
+{% block content %}
+    <div class="ui grid main container">
+        <div class="ui container">
+            <div class="ui items animated">
+            {% for article in articles %}
+                    <div class="item">
+                        <a class="ui tiny image">
+                            <img src="{{ SITEURL }}/{{ article.author_avatar }}">
+                        </a>
+                        <div class="content">
+                            <a href="{{ SITEURL }}/{{ article.url }}" class="header harmattan-font">{{ article.title }}</a>
+                            <div class="description">
+                                <p>
+                                    {{ article.summary }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_scripts %}
+    <script type="text/javascript">
+    $('.ui.accordion').accordion();
+    </script>
+{% endblock %}
+{% block theme_css %}
+    {% include "semantic_css.html" %}
+{% endblock theme_css %}
+{% block theme_js %}
+    {% include "semantic_js.html" %}
+{% endblock theme_js %}

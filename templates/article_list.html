@@ -1,23 +1,31 @@
-<div class="ui link four column doubling stackable cards">
+<div class="ui four column doubling stackable cards">
     <!-- list posts -->
     {% for article in (articles_page.object_list if articles_page else articles) %}
-        <div class="card filtr-item" data-category="{{ article.tags | join(', ') }}">
+        <div class="ui lateef-font card filtr-item {{ article.color }}" data-category="{{ article.tags | join(', ') }}">
+            <div class="content harmattan-font">
+                <a href="{{ SITEURL }}/{{ article.author.url }}" style="color: rgba(0,0,0,.85);">
+                <img class="ui avatar image" src="{{SITEURL}}/{{ article.author_avatar }}"> 
+                    {{article.author_fa}}
+                </a>
+            </div>
             <div class="content">
-                <div class="header">{{ article.title }}</div>
-                <div class="meta">{{ article.date.strftime('%d %b %Y') }}</div>
-                <div class="description">
+                <a class="header harmattan-font" href="{{ SITEURL }}/{{ article.url }}">
+                        {{ article.title }}
+                </a>
+                <div class="meta lateef-font">{{ article.date |jDate('%d %B %Y') }}</div>
+                <a class="description" href="{{ SITEURL }}/{{ article.url }}">
                     <p>
                         {{ article.summary }}
                     </p>
-                </div>
+                </a>
             </div>
             <div class="extra content">
                 <i class="comment outline icon"></i>
                 0
                 <div class="ui divider"></div>
-                {% for tag in article.tags %}
-                    <a class="ui label" style="margin-top:10px;direction:ltr;">
-                        {{ tag }}
+                {% for tag in zipped | zip(article.tags, article.tag_colors) %}
+                    <a class="ui {{tag.1}} label roboto-font" href="{{ SITEURL }}/{{ tag.0.url }}" style="margin-top:10px;direction:ltr;">
+                        {{ tag.0 |title }}
                     </a>
                 {% endfor %}
             </div>

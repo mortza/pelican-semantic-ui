@@ -5,70 +5,176 @@
 html[lang="fa"], html[lang="ar"] {
     direction: rtl;
 }
-pre>code{
-    direction: ltr;
+.morteza{ 
+    background: linear-gradient(black, red, yellow) !important;
 }
-.CodeMirror{
+body {
+    font-size: 62.5%;
+    font-family: 'Lateef', 'Roboto';
+}
+
+.ui.header.article-huge {
+    font-family: 'Harmattan', sans-serif !important;
+}
+
+.harmattan-font {
+    font-family: 'Harmattan', sans-serif !important;
+}
+
+.lateef-font {
+    font-family: 'Lateef', cursive !important;
+}
+
+.roboto-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Lateef', cursive;
+    font-size: 1.4285em;
+}
+
+pre>code {
+    direction: ltr !important;
+}
+
+.CodeMirror {
     height: auto !important;
     font-size: 1rem;
     width: 100%;
     border-radius: 10px;
 }
-body {
-    font-family: serif;
-}
 
-.facebook-color {
-    background-color: #428bca !important;
-}
-
-.twitter-color {
-    background-color: #5bc0de !important;
-}
-
-.instagram-color {
-    background: #a52a2a !important;
-}
-
-.google-plus-color {
-    background-color: #d9534f !important;
-}
-
-#sidebar_toggle {
-    position: fixed;
-    z-index: 500;
-}
-
-div>a.active.item {
-    background: inherit !important;
-}
-
-.fab {
-    position: fixed;
-    width: 56px;
-    left: 97%;
-    bottom: 15px;
-    margin-left: -28px;
-}
-
-.fab-action-button {
-    display:flex !important;
-    justify-content:center;
-    align-items:center;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
+blockquote {
     display: block;
-    width: 56px;
-    height: 56px;
-    background-color: #00B5AD;
-    border-radius: 50%;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;  /*Font*/
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.2;
+    font-style: italic;
+    font-weight: bold;
+    color: #666;  /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;  /*Borders - (Optional)*/
+    border-right-style: solid;
+    border-right-width: 15px;
+    border-left-style: solid;
+    border-left-width: 2px;
 }
-.icon.bars.big {
-    margin: 0;
+
+blockquote a {
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+}
+blockquote a:hover {
+    color: #666;
+}
+blockquote em {
+    font-style: italic;
+}
+blockquote.default, blockquote.grey {
+    border-right-color: #656D77;
+    border-left-color: #434A53;
+}
+blockquote.red {
+    border-left-color: #DB2828;
+    border-right-color: #DB2828;
+}
+blockquote.orange {
+    border-left-color: #F2711C;
+    border-right-color: #F2711C;
+}
+blockquote.yellow {
+    border-left-color: #FBBD08;
+    border-right-color: #FBBD08;
+}
+blockquote.olive {
+    border-left-color: #B5CC18;
+    border-right-color: #B5CC18;
+}
+blockquote.green {
+    border-left-color: #21BA45;
+    border-right-color: #21BA45;
+}
+blockquote.teal {
+    border-left-color: #00B5AD;
+    border-right-color: #00B5AD;
+}
+blockquote.blue {
+    border-left-color: #2185D0;
+    border-right-color: #2185D0;
+}
+blockquote.violet {
+    border-left-color: #6435C9;
+    border-right-color: #6435C9;
+}
+blockquote.purple {
+    border-left-color: #A333C8;
+    border-right-color: #A333C8;
+}
+blockquote.pink {
+    border-left-color: #E03997;
+    border-right-color: #E03997;
+}
+blockquote.brown {
+    border-left-color: #A5673F;
+    border-right-color: #A5673F;
+}
+blockquote.black {
+    border-left-color: #1B1C1D;
+    border-right-color: #1B1C1D;
+}
+span.Cdefault {
+    color: #434a53;
+}
+
+span.Cgrapefruit {
+    color: #da4453;
+}
+
+span.Cbittersweet {
+    color: #e95546;
+}
+
+span.Csunflower {
+    color: #f6ba59;
+}
+
+span.Cgrass {
+    color: #8bc163;
+}
+
+span.Cmint {
+    color: #34bc9d;
+}
+
+span.Caqua {
+    color: #3bb0d6;
+}
+
+span.Cbluejeans {
+    color: #4b8ad6;
+}
+
+span.Clavander {
+    color: #977bd5;
+}
+
+span.Cpinkrose {
+    color: #d870a9;
+}
+
+span.Clight {
+    color: #e6e9ed;
+}
+
+span.Cgray {
+    color: #aab2bc;
 }
