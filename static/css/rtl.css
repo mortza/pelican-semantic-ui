@@ -2776,6 +2776,7 @@ blockquote.black { border-left-color: #1B1C1D; border-right-color: #1B1C1D; }
 .text.bold { font-weight: bold; }
 .text.italic { font-weight: italic; }
 .text.underline { text-decoration: underline; }
+.text.lower { font-size: 0.9em; }
 span.Cdefault { color: #434a53; }
 span.Cgrapefruit { color: #da4453; }
 span.Cbittersweet { color: #e95546; }
